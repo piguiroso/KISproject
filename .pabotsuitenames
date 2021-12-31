@@ -1,0 +1,10 @@
+datasources:14d95992c7342192498569cc0012501641ea73a9
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:a38a1c8f18f2290576d6bb1f3dd47a7bac09e95d
+--suite Suites.Test Case 01
+--suite Suites.Test Case 02
+--suite Suites.Test Case 03
+--suite Suites.Test Case 04
+--suite Suites.Test Case 05
+--suite Suites.Test Case 06

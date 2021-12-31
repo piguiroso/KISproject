@@ -1,0 +1,16 @@
+1640986013428	geckodriver	INFO	Listening on 127.0.0.1:59248
+1640986013625	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "59249" "-foreground" "-no-remote" "-profile" "/var/folders/31/cqyjjphn7td_13x65ypj0f8r0000gn/T/rust_mozprofilee7pb0c"
+1640986015411	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/31/cqyjjphn7td_13x65ypj0f8r0000gn/T/rust_mozprofilee7pb0c/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 243"  data: no]
+DevTools listening on ws://localhost:59249/devtools/browser/7a034604-a914-43b4-a0ca-f598cc50e0f9
+1640986026641	Marionette	INFO	Listening on port 59263
+1640986027009	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640986781727	Marionette	INFO	Stopped listening on port 59263
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

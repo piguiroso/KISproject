@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.1 on darwin)" generated="20211231 18:26:52.014" rpa="false" schemaversion="2">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Test Case 04" source="/Users/murilo/Documents/KIS Project/tests/test_case_04.robot">
+<test id="s1-s1-t1" name="Scenario 04: Calculate without input any number">
+<kw name="Given I access the website to calculate a factorial" library="BDD_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211231 18:26:53.483" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211231 18:26:53.484" level="INFO">Firefox driver log is always forced to to: /Users/murilo/Documents/KIS Project/pabot_results/3/geckodriver-1.log</msg>
+<status status="PASS" starttime="20211231 18:26:53.482" endtime="20211231 18:27:07.294"/>
+</kw>
+<kw name="Acess application website" library="factorial_home_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211231 18:27:07.298" level="INFO">Opening url 'https://qainterview.pythonanywhere.com/'</msg>
+<status status="PASS" starttime="20211231 18:27:07.297" endtime="20211231 18:27:26.102"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Factoriall</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211231 18:27:26.137" level="INFO">Page title is 'Factoriall'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.103" endtime="20211231 18:27:26.137"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211231 18:27:26.142" endtime="20211231 18:27:26.191"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:07.295" endtime="20211231 18:27:26.192"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.474" endtime="20211231 18:27:26.193"/>
+</kw>
+<kw name="When I click on Calculate without input a value" library="BDD_keywords">
+<kw name="Click calculate without any number" library="factorial_home_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:26.198" level="INFO">Clicking element 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.196" endtime="20211231 18:27:26.495"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CALCULATE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:26.499" level="INFO">Clicking element 'id=getFactorial'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.496" endtime="20211231 18:27:26.761"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:26.195" endtime="20211231 18:27:26.762"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:26.194" endtime="20211231 18:27:26.763"/>
+</kw>
+<kw name="Then I verify a error message" library="BDD_keywords">
+<kw name="Invalid value alert" library="factorial_home_keywords">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULT_MESSAGE}</arg>
+<arg>Please enter an integer</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211231 18:27:26.805" level="INFO">Element 'id=resultDiv' contains text 'Please enter an integer'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.767" endtime="20211231 18:27:26.806"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211231 18:27:26.918" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="alert_screenshot.png"&gt;&lt;img src="alert_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211231 18:27:26.806" endtime="20211231 18:27:26.919"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:26.765" endtime="20211231 18:27:26.919"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211231 18:27:26.929" endtime="20211231 18:27:41.055"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:26.764" endtime="20211231 18:27:41.056"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.455" endtime="20211231 18:27:41.057"/>
+</test>
+<status status="PASS" starttime="20211231 18:26:52.171" endtime="20211231 18:27:41.060"/>
+</suite>
+<status status="PASS" starttime="20211231 18:26:52.040" endtime="20211231 18:27:41.064"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Case 04">Suites.Test Case 04</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211231 18:26:53.415" level="ERROR">Error in file '/Users/murilo/Documents/KIS Project/resource/Keywords/BDD_keywords.robot' on line 3: Resource file '../resource/Keywords/factorial_home_keywords.robot' does not exist.</msg>
+</errors>
+</robot>

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 4.1.3 (Python 3.10.1 on darwin)" generated="20211231 18:27:42.245" rpa="false" schemaversion="2">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Test Case 01" source="/Users/murilo/Documents/KIS Project/tests/test_case_01.robot">
+<test id="s1-s1-t1" name="Scenario 01: Calculate a integer number factorial">
+<kw name="Given I access the website to calculate a factorial" library="BDD_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211231 18:26:53.499" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211231 18:26:53.505" level="INFO">Firefox driver log is always forced to to: /Users/murilo/Documents/KIS Project/pabot_results/0/geckodriver-1.log</msg>
+<status status="PASS" starttime="20211231 18:26:53.497" endtime="20211231 18:27:07.041"/>
+</kw>
+<kw name="Acess application website" library="factorial_home_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211231 18:27:07.045" level="INFO">Opening url 'https://qainterview.pythonanywhere.com/'</msg>
+<status status="PASS" starttime="20211231 18:27:07.044" endtime="20211231 18:27:26.919"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Factoriall</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211231 18:27:26.940" level="INFO">Page title is 'Factoriall'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.920" endtime="20211231 18:27:26.941"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211231 18:27:26.942" endtime="20211231 18:27:26.994"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:07.042" endtime="20211231 18:27:26.995"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.495" endtime="20211231 18:27:27.000"/>
+</kw>
+<kw name="When I input a integer number" library="BDD_keywords">
+<kw name="Input a integer number" library="factorial_home_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:27.008" level="INFO">Clicking element 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:27.007" endtime="20211231 18:27:27.276"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:27.279" level="INFO">Typing text '5' into text field 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:27.277" endtime="20211231 18:27:27.330"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CALCULATE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:27.334" level="INFO">Clicking element 'id=getFactorial'.</msg>
+<status status="PASS" starttime="20211231 18:27:27.331" endtime="20211231 18:27:27.587"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:27.005" endtime="20211231 18:27:27.588"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:27.003" endtime="20211231 18:27:27.589"/>
+</kw>
+<kw name="Then I verify the right result" library="BDD_keywords">
+<kw name="Result verification" library="factorial_home_keywords">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULT_MESSAGE}</arg>
+<arg>The factorial of 5 is: 120</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211231 18:27:27.636" level="INFO">Element 'id=resultDiv' contains text 'The factorial of 5 is: 120'.</msg>
+<status status="PASS" starttime="20211231 18:27:27.592" endtime="20211231 18:27:27.636"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>result_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211231 18:27:27.748" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-result_screenshot.png"&gt;&lt;img src="0-result_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211231 18:27:27.637" endtime="20211231 18:27:27.748"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:27.591" endtime="20211231 18:27:27.748"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211231 18:27:27.749" endtime="20211231 18:27:39.493"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:27.589" endtime="20211231 18:27:39.493"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.490" endtime="20211231 18:27:39.494"/>
+</test>
+<status status="PASS" starttime="20211231 18:26:52.372" endtime="20211231 18:27:39.497"/>
+</suite>
+<suite id="s1-s2" name="Test Case 02" source="/Users/murilo/Documents/KIS Project/tests/test_case_02.robot">
+<test id="s1-s2-t1" name="Scenario 02: Calculate a float number factorial">
+<kw name="Given I access the website to calculate a factorial" library="BDD_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211231 18:26:53.364" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211231 18:26:53.369" level="INFO">Firefox driver log is always forced to to: /Users/murilo/Documents/KIS Project/pabot_results/1/geckodriver-1.log</msg>
+<status status="PASS" starttime="20211231 18:26:53.363" endtime="20211231 18:27:07.226"/>
+</kw>
+<kw name="Acess application website" library="factorial_home_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211231 18:27:07.231" level="INFO">Opening url 'https://qainterview.pythonanywhere.com/'</msg>
+<status status="PASS" starttime="20211231 18:27:07.230" endtime="20211231 18:27:36.272"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Factoriall</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211231 18:27:36.911" level="INFO">Page title is 'Factoriall'.</msg>
+<status status="PASS" starttime="20211231 18:27:36.273" endtime="20211231 18:27:36.911"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211231 18:27:36.912" endtime="20211231 18:27:37.019"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:07.228" endtime="20211231 18:27:37.020"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.362" endtime="20211231 18:27:37.021"/>
+</kw>
+<kw name="When I input a float number" library="BDD_keywords">
+<kw name="Input a float number" library="factorial_home_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:37.027" level="INFO">Clicking element 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:37.026" endtime="20211231 18:27:37.447"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<arg>2.5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:37.449" level="INFO">Typing text '2.5' into text field 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:37.447" endtime="20211231 18:27:37.491"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CALCULATE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:37.493" level="INFO">Clicking element 'id=getFactorial'.</msg>
+<status status="PASS" starttime="20211231 18:27:37.492" endtime="20211231 18:27:37.727"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:37.025" endtime="20211231 18:27:37.729"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:37.021" endtime="20211231 18:27:37.729"/>
+</kw>
+<kw name="Then I verify a error message" library="BDD_keywords">
+<kw name="Invalid value alert" library="factorial_home_keywords">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULT_MESSAGE}</arg>
+<arg>Please enter an integer</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211231 18:27:37.768" level="INFO">Element 'id=resultDiv' contains text 'Please enter an integer'.</msg>
+<status status="PASS" starttime="20211231 18:27:37.733" endtime="20211231 18:27:37.769"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211231 18:27:37.866" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="1-alert_screenshot.png"&gt;&lt;img src="1-alert_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211231 18:27:37.769" endtime="20211231 18:27:37.866"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:37.732" endtime="20211231 18:27:37.867"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211231 18:27:37.868" endtime="20211231 18:27:40.454"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:37.730" endtime="20211231 18:27:40.454"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.360" endtime="20211231 18:27:40.455"/>
+</test>
+<status status="PASS" starttime="20211231 18:26:52.109" endtime="20211231 18:27:40.458"/>
+</suite>
+<suite id="s1-s3" name="Test Case 03" source="/Users/murilo/Documents/KIS Project/tests/test_case_03.robot">
+<test id="s1-s3-t1" name="Scenario 03: Calculate a string factorial">
+<kw name="Given I access the website to calculate a factorial" library="BDD_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211231 18:26:53.405" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211231 18:26:53.407" level="INFO">Firefox driver log is always forced to to: /Users/murilo/Documents/KIS Project/pabot_results/2/geckodriver-1.log</msg>
+<status status="PASS" starttime="20211231 18:26:53.403" endtime="20211231 18:27:07.699"/>
+</kw>
+<kw name="Acess application website" library="factorial_home_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211231 18:27:07.704" level="INFO">Opening url 'https://qainterview.pythonanywhere.com/'</msg>
+<status status="PASS" starttime="20211231 18:27:07.703" endtime="20211231 18:27:25.328"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Factoriall</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211231 18:27:25.352" level="INFO">Page title is 'Factoriall'.</msg>
+<status status="PASS" starttime="20211231 18:27:25.329" endtime="20211231 18:27:25.352"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211231 18:27:25.353" endtime="20211231 18:27:25.397"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:07.701" endtime="20211231 18:27:25.398"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.399" endtime="20211231 18:27:25.400"/>
+</kw>
+<kw name="When I input a string" library="BDD_keywords">
+<kw name="Input a string" library="factorial_home_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:25.406" level="INFO">Clicking element 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:25.404" endtime="20211231 18:27:25.660"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<arg>j</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:25.661" level="INFO">Typing text 'j' into text field 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:25.660" endtime="20211231 18:27:25.703"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CALCULATE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:25.705" level="INFO">Clicking element 'id=getFactorial'.</msg>
+<status status="PASS" starttime="20211231 18:27:25.704" endtime="20211231 18:27:25.942"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:25.403" endtime="20211231 18:27:25.943"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:25.401" endtime="20211231 18:27:25.943"/>
+</kw>
+<kw name="Then I verify a error message" library="BDD_keywords">
+<kw name="Invalid value alert" library="factorial_home_keywords">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULT_MESSAGE}</arg>
+<arg>Please enter an integer</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211231 18:27:25.979" level="INFO">Element 'id=resultDiv' contains text 'Please enter an integer'.</msg>
+<status status="PASS" starttime="20211231 18:27:25.945" endtime="20211231 18:27:25.979"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211231 18:27:26.055" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2-alert_screenshot.png"&gt;&lt;img src="2-alert_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211231 18:27:25.979" endtime="20211231 18:27:26.055"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:25.944" endtime="20211231 18:27:26.055"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211231 18:27:26.056" endtime="20211231 18:27:37.616"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:25.944" endtime="20211231 18:27:37.617"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.394" endtime="20211231 18:27:37.618"/>
+</test>
+<status status="PASS" starttime="20211231 18:26:52.379" endtime="20211231 18:27:37.620"/>
+</suite>
+<suite id="s1-s4" name="Test Case 04" source="/Users/murilo/Documents/KIS Project/tests/test_case_04.robot">
+<test id="s1-s4-t1" name="Scenario 04: Calculate without input any number">
+<kw name="Given I access the website to calculate a factorial" library="BDD_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211231 18:26:53.483" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211231 18:26:53.484" level="INFO">Firefox driver log is always forced to to: /Users/murilo/Documents/KIS Project/pabot_results/3/geckodriver-1.log</msg>
+<status status="PASS" starttime="20211231 18:26:53.482" endtime="20211231 18:27:07.294"/>
+</kw>
+<kw name="Acess application website" library="factorial_home_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211231 18:27:07.298" level="INFO">Opening url 'https://qainterview.pythonanywhere.com/'</msg>
+<status status="PASS" starttime="20211231 18:27:07.297" endtime="20211231 18:27:26.102"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Factoriall</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211231 18:27:26.137" level="INFO">Page title is 'Factoriall'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.103" endtime="20211231 18:27:26.137"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211231 18:27:26.142" endtime="20211231 18:27:26.191"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:07.295" endtime="20211231 18:27:26.192"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.474" endtime="20211231 18:27:26.193"/>
+</kw>
+<kw name="When I click on Calculate without input a value" library="BDD_keywords">
+<kw name="Click calculate without any number" library="factorial_home_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:26.198" level="INFO">Clicking element 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.196" endtime="20211231 18:27:26.495"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CALCULATE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:26.499" level="INFO">Clicking element 'id=getFactorial'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.496" endtime="20211231 18:27:26.761"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:26.195" endtime="20211231 18:27:26.762"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:26.194" endtime="20211231 18:27:26.763"/>
+</kw>
+<kw name="Then I verify a error message" library="BDD_keywords">
+<kw name="Invalid value alert" library="factorial_home_keywords">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULT_MESSAGE}</arg>
+<arg>Please enter an integer</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211231 18:27:26.805" level="INFO">Element 'id=resultDiv' contains text 'Please enter an integer'.</msg>
+<status status="PASS" starttime="20211231 18:27:26.767" endtime="20211231 18:27:26.806"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211231 18:27:26.918" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="3-alert_screenshot.png"&gt;&lt;img src="3-alert_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211231 18:27:26.806" endtime="20211231 18:27:26.919"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:26.765" endtime="20211231 18:27:26.919"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211231 18:27:26.929" endtime="20211231 18:27:41.055"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:26.764" endtime="20211231 18:27:41.056"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.455" endtime="20211231 18:27:41.057"/>
+</test>
+<status status="PASS" starttime="20211231 18:26:52.171" endtime="20211231 18:27:41.060"/>
+</suite>
+<suite id="s1-s5" name="Test Case 05" source="/Users/murilo/Documents/KIS Project/tests/test_case_05.robot">
+<test id="s1-s5-t1" name="Scenario 05: Calculate big numbers factorial">
+<kw name="Given I access the website to calculate a factorial" library="BDD_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211231 18:26:53.365" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211231 18:26:53.366" level="INFO">Firefox driver log is always forced to to: /Users/murilo/Documents/KIS Project/pabot_results/4/geckodriver-1.log</msg>
+<status status="PASS" starttime="20211231 18:26:53.364" endtime="20211231 18:27:06.448"/>
+</kw>
+<kw name="Acess application website" library="factorial_home_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211231 18:27:06.452" level="INFO">Opening url 'https://qainterview.pythonanywhere.com/'</msg>
+<status status="PASS" starttime="20211231 18:27:06.451" endtime="20211231 18:27:40.421"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Factoriall</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211231 18:27:40.433" level="INFO">Page title is 'Factoriall'.</msg>
+<status status="PASS" starttime="20211231 18:27:40.422" endtime="20211231 18:27:40.433"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211231 18:27:40.433" endtime="20211231 18:27:40.464"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:06.450" endtime="20211231 18:27:40.465"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.363" endtime="20211231 18:27:40.465"/>
+</kw>
+<kw name="When I input a integer number bigger than 170" library="BDD_keywords">
+<kw name="Input a big number" library="factorial_home_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:40.472" level="INFO">Clicking element 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:40.470" endtime="20211231 18:27:40.718"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<arg>300</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:40.720" level="INFO">Typing text '300' into text field 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:40.719" endtime="20211231 18:27:40.760"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CALCULATE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:40.761" level="INFO">Clicking element 'id=getFactorial'.</msg>
+<status status="PASS" starttime="20211231 18:27:40.760" endtime="20211231 18:27:41.010"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:40.467" endtime="20211231 18:27:41.011"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:40.466" endtime="20211231 18:27:41.011"/>
+</kw>
+<kw name="Then I verify a result" library="BDD_keywords">
+<kw name="Big numbers result verification" library="factorial_home_keywords">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULT_MESSAGE}</arg>
+<arg>The factorial of 300 is: Infinity</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211231 18:27:41.046" level="INFO">Element 'id=resultDiv' contains text 'The factorial of 300 is: Infinity'.</msg>
+<status status="PASS" starttime="20211231 18:27:41.014" endtime="20211231 18:27:41.047"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>result_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211231 18:27:41.128" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="4-result_screenshot.png"&gt;&lt;img src="4-result_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211231 18:27:41.048" endtime="20211231 18:27:41.128"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:41.013" endtime="20211231 18:27:41.129"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211231 18:27:41.129" endtime="20211231 18:27:41.970"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:41.012" endtime="20211231 18:27:41.970"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.361" endtime="20211231 18:27:41.971"/>
+</test>
+<status status="PASS" starttime="20211231 18:26:52.126" endtime="20211231 18:27:41.972"/>
+</suite>
+<suite id="s1-s6" name="Test Case 06" source="/Users/murilo/Documents/KIS Project/tests/test_case_06.robot">
+<test id="s1-s6-t1" name="Scenario 06: Calculate a negative number factorial">
+<kw name="Given I access the website to calculate a factorial" library="BDD_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211231 18:26:53.411" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211231 18:26:53.413" level="INFO">Firefox driver log is always forced to to: /Users/murilo/Documents/KIS Project/pabot_results/5/geckodriver-1.log</msg>
+<status status="PASS" starttime="20211231 18:26:53.411" endtime="20211231 18:27:07.155"/>
+</kw>
+<kw name="Acess application website" library="factorial_home_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211231 18:27:07.159" level="INFO">Opening url 'https://qainterview.pythonanywhere.com/'</msg>
+<status status="PASS" starttime="20211231 18:27:07.158" endtime="20211231 18:27:38.870"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Factoriall</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211231 18:27:38.891" level="INFO">Page title is 'Factoriall'.</msg>
+<status status="PASS" starttime="20211231 18:27:38.871" endtime="20211231 18:27:38.892"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211231 18:27:38.893" endtime="20211231 18:27:38.927"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:07.157" endtime="20211231 18:27:38.928"/>
+</kw>
+<status status="PASS" starttime="20211231 18:26:53.403" endtime="20211231 18:27:38.928"/>
+</kw>
+<kw name="When I input a negative number" library="BDD_keywords">
+<kw name="Input a negative number" library="factorial_home_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:38.934" level="INFO">Clicking element 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:38.932" endtime="20211231 18:27:39.194"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMBER_INPUT}</arg>
+<arg>-10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:39.195" level="INFO">Typing text '-10' into text field 'id=number'.</msg>
+<status status="PASS" starttime="20211231 18:27:39.194" endtime="20211231 18:27:39.234"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CALCULATE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211231 18:27:39.236" level="INFO">Clicking element 'id=getFactorial'.</msg>
+<status status="PASS" starttime="20211231 18:27:39.235" endtime="20211231 18:27:39.480"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:38.930" endtime="20211231 18:27:39.480"/>
+</kw>
+<status status="PASS" starttime="20211231 18:27:38.929" endtime="20211231 18:27:39.481"/>
+</kw>
+<kw name="Then I verify a error message" library="BDD_keywords">
+<kw name="Invalid value alert" library="factorial_home_keywords">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULT_MESSAGE}</arg>
+<arg>Please enter an integer</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211231 18:27:39.619" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="5-selenium-screenshot-1.png"&gt;&lt;img src="5-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211231 18:27:39.524" endtime="20211231 18:27:39.620"/>
+</kw>
+<msg timestamp="20211231 18:27:39.625" level="FAIL">Element 'id=resultDiv' should have contained text 'Please enter an integer' but its text was ''.</msg>
+<status status="FAIL" starttime="20211231 18:27:39.484" endtime="20211231 18:27:39.626"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20211231 18:27:39.627" endtime="20211231 18:27:39.628"/>
+</kw>
+<status status="FAIL" starttime="20211231 18:27:39.483" endtime="20211231 18:27:39.629"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20211231 18:27:39.630" endtime="20211231 18:27:39.630"/>
+</kw>
+<status status="FAIL" starttime="20211231 18:27:39.482" endtime="20211231 18:27:39.632"/>
+</kw>
+<status status="FAIL" starttime="20211231 18:26:53.392" endtime="20211231 18:27:39.633">Element 'id=resultDiv' should have contained text 'Please enter an integer' but its text was ''.</status>
+</test>
+<status status="FAIL" starttime="20211231 18:26:52.128" endtime="20211231 18:27:39.635"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 6 executions.</doc>
+<status status="FAIL" starttime="20211231 18:26:51.981" endtime="20211231 18:27:41.975"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Case 01">Suites.Test Case 01</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Test Case 02">Suites.Test Case 02</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Test Case 03">Suites.Test Case 03</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="Test Case 04">Suites.Test Case 04</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="Test Case 05">Suites.Test Case 05</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s6" name="Test Case 06">Suites.Test Case 06</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211231 18:26:53.411" level="ERROR">Error in file '/Users/murilo/Documents/KIS Project/resource/Keywords/BDD_keywords.robot' on line 3: Resource file '../resource/Keywords/factorial_home_keywords.robot' does not exist.</msg>
+<msg timestamp="20211231 18:26:53.355" level="ERROR">Error in file '/Users/murilo/Documents/KIS Project/resource/Keywords/BDD_keywords.robot' on line 3: Resource file '../resource/Keywords/factorial_home_keywords.robot' does not exist.</msg>
+<msg timestamp="20211231 18:26:53.373" level="ERROR">Error in file '/Users/murilo/Documents/KIS Project/resource/Keywords/BDD_keywords.robot' on line 3: Resource file '../resource/Keywords/factorial_home_keywords.robot' does not exist.</msg>
+<msg timestamp="20211231 18:26:53.415" level="ERROR">Error in file '/Users/murilo/Documents/KIS Project/resource/Keywords/BDD_keywords.robot' on line 3: Resource file '../resource/Keywords/factorial_home_keywords.robot' does not exist.</msg>
+<msg timestamp="20211231 18:26:53.352" level="ERROR">Error in file '/Users/murilo/Documents/KIS Project/resource/Keywords/BDD_keywords.robot' on line 3: Resource file '../resource/Keywords/factorial_home_keywords.robot' does not exist.</msg>
+<msg timestamp="20211231 18:26:53.381" level="ERROR">Error in file '/Users/murilo/Documents/KIS Project/resource/Keywords/BDD_keywords.robot' on line 3: Resource file '../resource/Keywords/factorial_home_keywords.robot' does not exist.</msg>
+</errors>
+</robot>

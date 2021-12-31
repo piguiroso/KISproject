@@ -1,0 +1,15 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Test Case 06                                                           
+==============================================================================
+Scenario 06: Calculate a negative number factorial                    | FAIL |
+Element 'id=resultDiv' should have contained text 'Please enter an integer' but its text was ''.
+------------------------------------------------------------------------------
+Suites.Test Case 06                                                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/murilo/Documents/KIS Project/pabot_results/5/output.xml
